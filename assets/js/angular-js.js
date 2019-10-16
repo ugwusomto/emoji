@@ -1,6 +1,7 @@
 var app = angular.module("Platzi", []);
 app.controller("BaseCtrl", function($scope, $http) {
   $http.get("/emoji").then(function(response) {
+    console.log(response.data);
     $scope.emojis = response.data;
   });
 
