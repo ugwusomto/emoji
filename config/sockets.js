@@ -10,38 +10,39 @@
  */
 
 module.exports.sockets = {
+  adapter: "socket.io-redis",
+  host: "redis-18724.c16.us-east-1-2.ec2.cloud.redislabs.com",
+  port: 18724,
+  user: "rediscloud",
+  pass: "3QCEYpkkGjyKnxBWDvp5br4gZEfah0cs"
 
   /***************************************************************************
-  *                                                                          *
-  * `transports`                                                             *
-  *                                                                          *
-  * The protocols or "transports" that socket clients are permitted to       *
-  * use when connecting and communicating with this Sails application.       *
-  *                                                                          *
-  * > Never change this here without also configuring `io.sails.transports`  *
-  * > in your client-side code.  If the client and the server are not using  *
-  * > the same array of transports, sockets will not work properly.          *
-  * >                                                                        *
-  * > For more info, see:                                                    *
-  * > https://sailsjs.com/docs/reference/web-sockets/socket-client           *
-  *                                                                          *
-  ***************************************************************************/
-
+   *                                                                          *
+   * `transports`                                                             *
+   *                                                                          *
+   * The protocols or "transports" that socket clients are permitted to       *
+   * use when connecting and communicating with this Sails application.       *
+   *                                                                          *
+   * > Never change this here without also configuring `io.sails.transports`  *
+   * > in your client-side code.  If the client and the server are not using  *
+   * > the same array of transports, sockets will not work properly.          *
+   * >                                                                        *
+   * > For more info, see:                                                    *
+   * > https://sailsjs.com/docs/reference/web-sockets/socket-client           *
+   *                                                                          *
+   ***************************************************************************/
   // transports: [ 'websocket' ],
-
-
   /***************************************************************************
-  *                                                                          *
-  * `beforeConnect`                                                          *
-  *                                                                          *
-  * This custom beforeConnect function will be run each time BEFORE a new    *
-  * socket is allowed to connect, when the initial socket.io handshake is    *
-  * performed with the server.                                               *
-  *                                                                          *
-  * https://sailsjs.com/config/sockets#?beforeconnect                        *
-  *                                                                          *
-  ***************************************************************************/
-
+   *                                                                          *
+   * `beforeConnect`                                                          *
+   *                                                                          *
+   * This custom beforeConnect function will be run each time BEFORE a new    *
+   * socket is allowed to connect, when the initial socket.io handshake is    *
+   * performed with the server.                                               *
+   *                                                                          *
+   * https://sailsjs.com/config/sockets#?beforeconnect                        *
+   *                                                                          *
+   ***************************************************************************/
   // beforeConnect: function(handshake, proceed) {
   //
   //   // `true` allows the socket to connect.
@@ -49,17 +50,14 @@ module.exports.sockets = {
   //   return proceed(undefined, true);
   //
   // },
-
-
   /***************************************************************************
-  *                                                                          *
-  * `afterDisconnect`                                                        *
-  *                                                                          *
-  * This custom afterDisconnect function will be run each time a socket      *
-  * disconnects                                                              *
-  *                                                                          *
-  ***************************************************************************/
-
+   *                                                                          *
+   * `afterDisconnect`                                                        *
+   *                                                                          *
+   * This custom afterDisconnect function will be run each time a socket      *
+   * disconnects                                                              *
+   *                                                                          *
+   ***************************************************************************/
   // afterDisconnect: function(session, socket, done) {
   //
   //   // By default: do nothing.
@@ -67,16 +65,11 @@ module.exports.sockets = {
   //   return done();
   //
   // },
-
-
   /***************************************************************************
-  *                                                                          *
-  * Whether to expose a 'GET /__getcookie' route that sets an HTTP-only      *
-  * session cookie.                                                          *
-  *                                                                          *
-  ***************************************************************************/
-
+   *                                                                          *
+   * Whether to expose a 'GET /__getcookie' route that sets an HTTP-only      *
+   * session cookie.                                                          *
+   *                                                                          *
+   ***************************************************************************/
   // grant3rdPartyCookie: true,
-
-
 };
